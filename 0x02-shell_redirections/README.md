@@ -9,3 +9,8 @@ Shell redirections project
 8. Task 8 save current state of directory
 9. Task 9 Duplicate the last line
 10. Task 10 No more javascript
+11. Task 11 Don't count your directories
+12.Whatt's new
+13. Task 13
+14. Task 14
+15. Task 15
