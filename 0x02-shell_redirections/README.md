@@ -4,3 +4,4 @@ Shell redirections project
 3. Display the contents of two paths /etc/passwd and /etc/hosts
 4. Displaying the last 10 lines of a file with the tail command
 5. Displaying the first 10 lines of a file instead with the head command
+6. Script to display the third line of a file
