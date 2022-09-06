@@ -5,3 +5,4 @@ Shell redirections project
 4. Displaying the last 10 lines of a file with the tail command
 5. Displaying the first 10 lines of a file instead with the head command
 6. Script to display the third line of a file
+7. Create the with scppecial charater symbols containing best school
