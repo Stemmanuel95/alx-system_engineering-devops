@@ -8,3 +8,4 @@ Shell redirections project
 7. Create the with scppecial charater symbols containing best school
 8. Task 8 save current state of directory
 9. Task 9 Duplicate the last line
+10. Task 10 No more javascript
