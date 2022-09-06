@@ -1,1 +1,1 @@
-Shell io redirections projects
+Shell redirections project
