@@ -6,3 +6,5 @@ Shell redirections project
 5. Displaying the first 10 lines of a file instead with the head command
 6. Script to display the third line of a file
 7. Create the with scppecial charater symbols containing best school
+8. Task 8 save current state of directory
+9. Task 9 Duplicate the last line
