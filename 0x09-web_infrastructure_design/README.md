@@ -26,6 +26,7 @@ Emmanuel Yeboah Manu | Github: [Stemmanuel95](https://github.com/stemmanuel95)
 # Eplanation on Project Tasks
 # Task 0. Simple web stack
 
+## Key Task Definitions
 * What is a server?
 A server is a computer or software program that provides a service or functionality to other computers or devices on a network. In the context of the internet, a server typically refers to a computer or software program that provides services such as serving web pages, email, file sharing, or database access to other computers or devices.
 
