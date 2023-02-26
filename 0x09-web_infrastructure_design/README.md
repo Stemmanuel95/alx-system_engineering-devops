@@ -111,7 +111,7 @@ There is no monitoring set up to track the health of the servers and services, m
 * Adding a server: 
 You're adding a server to distribute the workload and ensure high availability. When you have multiple servers, you can distribute the load across them to avoid overburdening any one server. Additionally, if one server goes down, the others can continue to handle traffic, ensuring the availability of your service.
 
-* Adding a load balancer: 
+**Adding a load balancer**: 
 A load balancer distributes incoming requests across multiple servers to ensure that no one server is overwhelmed. It can also provide redundancy by automatically redirecting traffic to healthy servers if one server goes down. Using HAProxy to configure a cluster provides even greater fault tolerance, as multiple load balancers can work together to ensure that traffic is always directed to healthy servers.
 
 * Splitting components onto separate servers: 
