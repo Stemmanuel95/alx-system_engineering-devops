@@ -25,6 +25,25 @@ Emmanuel Yeboah Manu | Github: [Stemmanuel95](https://github.com/stemmanuel95)
 
 # Eplanation on Project Tasks
 # Task 0. Simple web stack
+
+* What is a server?
+A server is a computer or software program that provides a service or functionality to other computers or devices on a network. In the context of the internet, a server typically refers to a computer or software program that provides services such as serving web pages, email, file sharing, or database access to other computers or devices.
+
+* What is the role of a Domain name? 
+A domain name is a unique name that identifies a website on the internet. The role of a domain name is to provide a memorable and easy-to-use address for a website so that users can access it without having to remember its IP address (which is a numerical address that identifies a specific computer or device on a network).
+
+* What type of DNS record www is in www.foobar.com?
+The "www" in "www.foobar.com" is not a DNS record but rather a subdomain. A subdomain is a subset of a larger domain that is used to organize and distinguish different services or sections of a website. The DNS record associated with the subdomain "www" is typically an "A" record, which maps the subdomain to an IP address.
+
+* What is the role of the web server?
+The role of a web server is to serve web pages to clients (such as web browsers) that request them over the internet. A web server receives requests from clients, retrieves the appropriate web page files, and sends them back to the client over the internet. The web server is responsible for processing HTTP requests and responses, and for handling the communication between the client and the web application.
+
+* What is the role of the database
+A database is a software program that stores and manages structured data. The role of a database is to provide an efficient and reliable way to store and retrieve data, and to support the functionality of web applications that require data storage and retrieval. Web applications typically interact with databases through an application programming interface (API) that provides a way for the application to communicate with the database and perform operations such as querying, inserting, updating, and deleting data.
+
+* What is the server using to communicate with the computer of the user requesting the website
+An application server is a software program that provides additional functionality beyond what a web server can provide. An application server typically provides services such as transaction management, security, database access, and other functions required by web applications. Application servers can be used to host web applications that require more advanced functionality than what a simple web server can provide.
+
 To design a one server web infrastructure that hosts the website reachable via www.foobar.com, let's start by understanding the user's request. When a user types in www.foobar.com into their web browser and hits enter, the request is sent to the DNS (Domain Name System) server to resolve the IP address associated with www.foobar.com. Once the IP address is resolved, the user's computer sends a request to the IP address to access the website.
 ## Specifics about this infrastructure
 In our infrastructure, we will have one server that will host the web server (Nginx), application server, and the MySQL database. We will install the LAMP stack (Linux, Apache, MySQL, PHP) on the server.
@@ -32,6 +51,7 @@ The domain name foobar.com will be configured with a www record that points to o
 The web server (Nginx) will receive the user's request and serve static files such as HTML, CSS, and images. It will also route dynamic requests to the application server. The application server will handle dynamic requests and generate responses based on the user's request. It will communicate with the MySQL database to fetch and store data.
 The MySQL database will store the website's data such as user information, blog posts, and other content.
 The server will use HTTP (Hypertext Transfer Protocol) to communicate with the user's computer requesting the website. The web server and application server will generate HTTP responses that will be sent back to the user's computer.
+
 
 ## Issues about this infrastructure
 However, this infrastructure has some issues. It is a single point of failure (SPOF), which means that if the server goes down, the website will not be accessible. There will be downtime when maintenance is needed, such as deploying new code, as the web server needs to be restarted. The infrastructure cannot scale if there is too much incoming traffic, as the single server will not be able to handle the load.
@@ -111,7 +131,7 @@ There is no monitoring set up to track the health of the servers and services, m
 * Adding a server: 
 You're adding a server to distribute the workload and ensure high availability. When you have multiple servers, you can distribute the load across them to avoid overburdening any one server. Additionally, if one server goes down, the others can continue to handle traffic, ensuring the availability of your service.
 
-**Adding a load balancer**: 
+* Adding a load balancer: 
 A load balancer distributes incoming requests across multiple servers to ensure that no one server is overwhelmed. It can also provide redundancy by automatically redirecting traffic to healthy servers if one server goes down. Using HAProxy to configure a cluster provides even greater fault tolerance, as multiple load balancers can work together to ensure that traffic is always directed to healthy servers.
 
 * Splitting components onto separate servers: 
