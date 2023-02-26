@@ -102,3 +102,21 @@ The infrastructure does not have any firewall or HTTPS configured, leaving it vu
 There is no monitoring set up to track the health of the servers and services, making it difficult to identify and troubleshoot issues.
 
 
+# Task 3. Scale up
+
+## Specifics of the infrastructure we're describing.
+* Firstly, let's distinguish between an application server and a web server. A web server is responsible for serving static content such as HTML, CSS, and images. It's the first point of contact for a user's request, and it returns the content that matches the user's request. In contrast, an application server handles dynamic content and business logic. It interacts with a database and processes data to create dynamic content that is then served by the web server.
+
+* Now let's move on to the requirements listed.
+* Adding a server: 
+You're adding a server to distribute the workload and ensure high availability. When you have multiple servers, you can distribute the load across them to avoid overburdening any one server. Additionally, if one server goes down, the others can continue to handle traffic, ensuring the availability of your service.
+
+* Adding a load balancer: 
+A load balancer distributes incoming requests across multiple servers to ensure that no one server is overwhelmed. It can also provide redundancy by automatically redirecting traffic to healthy servers if one server goes down. Using HAProxy to configure a cluster provides even greater fault tolerance, as multiple load balancers can work together to ensure that traffic is always directed to healthy servers.
+
+* Splitting components onto separate servers: 
+This is a best practice in infrastructure design as it allows you to scale each component independently. For example, if your web server is overloaded but your application server is not, you can simply add more web servers to handle the increased load. Similarly, if your database is struggling, you can scale it up or out to improve its performance. Separating the components also reduces the risk of interference between them and can improve security by ensuring that each component only has access to the resources it needs.
+Overall, this infrastructure design improves performance, scalability, and fault tolerance. It also allows you to isolate and scale each component independently, making it easier to manage your infrastructure as your service grows.
+
+
+
