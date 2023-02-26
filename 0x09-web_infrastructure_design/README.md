@@ -2,7 +2,7 @@
 
 ## Project Authors
 
-Forster Asamany | Github: [fsaamany1](https://github.com/fsaamany1) 
+Forster Asamany | Github: [fasamany1](https://github.com/fasamany1) 
 
 Emmanuel Yeboah Manu | Github: [Stemmanuel95](https://github.com/stemmanuel95)
 
