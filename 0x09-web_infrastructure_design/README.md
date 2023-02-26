@@ -73,4 +73,32 @@ The load balancer server can be a single point of failure (SPOF). If it fails, t
 The infrastructure does not have any firewall or HTTPS configured, leaving it vulnerable to security issues.
 There is no monitoring set up to track the health of the servers and services, making it difficult to identify and troubleshoot issues.
 
+# Task 2. Secured and monitored web infrastructure
+Design for a three-server web infrastructure that hosts the website www.foobar.com:
+* Load Balancer Server:
+This server will act as a load balancer, distributing incoming traffic between the two application servers.
+It will run HAproxy, a software load balancer that provides high availability, load balancing, and proxying for TCP and HTTP-based applications.
+* Application Server 1:
+This server will host the first instance of the application.
+It will run Nginx as the web server, serving static files and passing dynamic requests to the application server.
+The server will run the application code base and connect to the MySQL database to retrieve and store data.
+* Application Server 2:
+This server will host the second instance of the application.
+It will run Nginx as the web server, serving static files and passing dynamic requests to the application server.
+The server will run the application code base and connect to the MySQL database to retrieve and store data.
+* Database Server:
+This server will host the MySQL database, where the application data will be stored.
+It will be configured as a Primary-Replica cluster, where the primary node will handle all the writes, and the replica node will handle the reads.
+The application servers will connect to the primary node to write data and connect to the replica node to read data.
+## Some specifics about this infrastructure:
+We are adding two application servers and a load balancer to handle more incoming traffic and provide high availability for the application.
+The load balancer will be configured with a round-robin distribution algorithm, where it will evenly distribute incoming requests to both application servers.
+The load balancer will be set up to enable an Active-Active setup, where both application servers are actively serving requests simultaneously.
+The database primary node will handle all the writes, and the replica node will handle the reads, providing a fault-tolerant setup and reducing the read traffic on the primary node.
+The primary node and the replica node will have different roles in the application. The primary node will handle all the writes, ensuring data consistency, while the replica node will handle the reads, providing faster access to data.
+* The issues with this infrastructure:
+The load balancer server can be a single point of failure (SPOF). If it fails, the application servers will not be able to handle incoming traffic.
+The infrastructure does not have any firewall or HTTPS configured, leaving it vulnerable to security issues.
+There is no monitoring set up to track the health of the servers and services, making it difficult to identify and troubleshoot issues.
+
 
