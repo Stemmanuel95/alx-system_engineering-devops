@@ -1,2 +1,28 @@
 # Web infrastructure design
-* Establishing communication channels because systems or applications to the user/client
+
+## Project Authors
+
+Forster Asamany | Github: [fsaamany1](https://github.com/fsaamany1) 
+
+Emmanuel Yeboah Manu | Github: [Stemmanuel95](https://github.com/stemmanuel95)
+
+## Concepts
+* For this project we looked at the following concepts;
+- DNS (Domain name systems)
+- Monitoring
+- Web Sever
+- Network Basics
+- Load Balancer
+- Server
+- A brief review of databases
+- The difference between a web server and app server
+- DNS record types
+- Single Point of failure
+- How to avoid downtime when deploying new code
+- High availability cluster (active-active/active-passive)
+- What is HTTPS
+- What is a firewall
+
+# Eplanation on Project Tasks
+## Task 0
+
