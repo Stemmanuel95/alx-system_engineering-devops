@@ -6,7 +6,7 @@ sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
 sudo mkdir -p /var/www/html
 
-# Gving read write execute command to user in this directory
+# Giving read write execute command to user in this directory
 sudo chmod -R 755 /var/www
 
 # The initial index page for a basic site
@@ -17,13 +17,13 @@ echo "Ceci n'est pas une page" |sudo tee /var/www/html/404.html
 
 # Redirection for a single page(/redirect_me) and adding the header to reveal
 # the hostname
-string_for_replacement="server_name _;\n\tadd_header X-Served-By
+new_string="server_name _;\n\tadd_header X-Served-By
 \$hostname;\n\trewrite ^\/redirect_me https:\/\/www.google.com permanent;"
-sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
 
 # Adding the redirection page for 404 error code
-string_for_replacement="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
-sudo sed -i "s/listen 80 default_server;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+new_string="listen 80 default_server;\n\terror_page 404 \/404.html;\n\tlocation = \/404.html {\n\t\troot \/var\/www\/html;\n\t\tinternal;\n\t}"
+sudo sed -i "s/listen 80 default_server;/$new_string/" /etc/nginx/sites-enabled/default
 
 # After all restart nginx or if possible the server itself to apply updates
 sudo service nginx restart
