@@ -17,8 +17,7 @@ echo "Ceci n'est pas une page" |sudo tee /var/www/html/404.html
 
 # Redirection for a single page(/redirect_me) and adding the header to reveal
 # the hostname
-new_string="server_name _;\n\tadd_header X-Served-By
-\$hostname;\n\trewrite ^\/redirect_me https:\/\/www.google.com permanent;"
+new_string="server_name _;\n\tadd_header X-Served-By \$hostname;\n\trewrite ^\/redirect_me https:\/\/www.google.com permanent;"
 sudo sed -i "s/server_name _;/$new_string/" /etc/nginx/sites-enabled/default
 
 # Adding the redirection page for 404 error code
