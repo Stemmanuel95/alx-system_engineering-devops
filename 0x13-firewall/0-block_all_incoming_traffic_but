@@ -1,7 +1,7 @@
-#First Check the system for any pending package updates
+#First Check the system for any pending package updates and install them
 sudo apt-get -y update
 
-#If any install those updates
+#Install my uwf firewall
 sudo apt-get -y install ufw
 
 #Disable the Uncomplicated Firewall (UFW) 
