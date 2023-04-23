@@ -1,0 +1,30 @@
+#First Check the system for any pending package updates
+sudo apt-get -y update
+
+#If any install those updates
+sudo apt-get -y install ufw
+
+#Disable the Uncomplicated Firewall (UFW) 
+sudo ufw disable
+
+#Deny the incoming connections to the server
+sudo ufw default deny incoming
+
+#Allow outgoing connections from the server
+sudo ufw default allow outgoing
+
+#Stop the system ufw services on the server
+sudo systemctl stop ufw
+
+#Allow connection port 22 for ssh
+sudo ufw allow 22/tcp
+
+#Allow port 443 for https and ssl certificate
+sudo ufw allow 443/tcp
+
+#Allow http port connections 80
+sudo ufw allow 80/tcp
+
+#Finally enable the firewall on the server required
+sudo ufw enable
+
