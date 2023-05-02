@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# My script accepts one argument and runs as another user
-
-sudo -u "$1" whoami
