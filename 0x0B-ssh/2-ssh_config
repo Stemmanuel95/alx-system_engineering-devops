@@ -1,0 +1,8 @@
+# Ssh client configuration to connect to a server without typing a passcode
+Host *
+    SendEnv LANG LC_*
+    GSSAPIAuthentication yes
+    GSSAPIDElegateCredentials no
+    IdentifyFile ~/.ssh/school
+    PasswordAuthentication no
+    HashKnownHosts yes
