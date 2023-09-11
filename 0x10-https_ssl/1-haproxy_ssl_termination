@@ -47,5 +47,5 @@ frontend globalticket-frontend-https
 
 backend globalticket-backend
         balance roundrobin
-        server 101193-web-01 54.90.37.12:80 check
-        server 101193-web-02 54.237.69.134:80 check
+        server 101193-web-01 54.227.195.69:80 check
+        server 101193-web-02 100.25.29.175:80 check
