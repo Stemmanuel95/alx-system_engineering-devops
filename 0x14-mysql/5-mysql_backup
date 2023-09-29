@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+#A script to backup and compress my datadump in a tarz file
+
+#Backup command
+mysqldump -u root -p"$1" --all-databases > backup.sql
+
+#compression command
+tar -czf $(date +%d-%m-%Y).tar.gz backup.sql
+
