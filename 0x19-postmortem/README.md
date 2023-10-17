@@ -1,4 +1,4 @@
-#ISSUE SUMMARY
+# ISSUE SUMMARY
 On Tuesday 30th May,2023 around 4:30 am GMT I received an emergency call from
 the IT department of a client that uses our insurance operational software.I
 was told that they were getting some strange errors from the application
@@ -10,7 +10,7 @@ day.The impact was more serious upon analysis such that there was no recorded
 data into the database of the software for the previous business day which was
 29th May,2023.
 
-#TIMELINE
+# TIMELINE
 * 5:30am - A server issue is detected,causing system inbuilt reports to throw
   empty data for records printed from the previous day.
 * 6:30am - Further checks suggested that an immediate virtual environment be
@@ -34,5 +34,5 @@ data into the database of the software for the previous business day which was
   to recapture old data from the previous data and as well conduct businesses
   for the current working day
 
-  #IMPACT
+  # IMPACT
 
