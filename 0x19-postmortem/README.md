@@ -34,7 +34,7 @@ data into the database of the software for the previous business day which was
   to recapture old data from the previous data and as well conduct businesses
   for the current working day
 
-  # ROOT CAUSE
+# ROOT CAUSE
 The root cause was as a result of a third party software used in creating clones of the server and this failed during the process.
 
 # IMPACT
