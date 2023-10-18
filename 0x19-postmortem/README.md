@@ -34,5 +34,12 @@ data into the database of the software for the previous business day which was
   to recapture old data from the previous data and as well conduct businesses
   for the current working day
 
-  # IMPACT
+  # ROOT CAUSE
+The root cause was as a result of a third party software used in creating clones of the server and this failed during the process.
+
+# IMPACT
+This caused the server to be restored to the last system restore date and unfortunately IT did not have any datadump before the cloning process therefore users lost all their data by one day.
+
+# MITIGATION
+To mitigate the impact of the data loss, the development team worked quickly to migrate the database to a new server. However, the migration process was complicated due to the large size of datadump from the old server, which caused a huge delay to import to the newly provisioned server without encountering issues.
 
